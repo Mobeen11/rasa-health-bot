@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: stess path
+  steps:
+  - intent: ask_lower_stress
+  - action: utter_stress_info
+
+- story: eat healthy path
+  steps:
+  - intent: ask_eat_healthy
+  - action: utter_healthy_diet_info
+
+- story: exercise path
+  steps:
+  - intent: ask_exercise
+  - action: utter_exercise_info
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: affirm
+  - health_form
