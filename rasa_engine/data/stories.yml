@@ -44,8 +44,25 @@ stories:
   - intent: ask_exercise
   - action: utter_exercise_info
 
-- story: happy path
+- story: survey happy path
   steps:
   - intent: greet
-  - action: affirm
-  - health_form
+  - action: utter_greet
+  - intent: affirm
+  - action: health_form
+  - active_loop: health_form
+
+
+- story: survey stop
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: health_form
+  - active_loop: health_form
+  - intent: out_of_scope
+  - action: utter_ask_continue
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_goodbye

@@ -7,12 +7,10 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
+from typing import Any, Text, Dict, List
+from rasa_sdk.forms import FormValidationAction
+from rasa_sdk import Action, Tracker
+from rasa_sdk.executor import CollectingDispatcher
 # class ActionHelloWorld(Action):
 #
 #     def name(self) -> Text:
@@ -25,3 +23,20 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+
+
+class ValidateHealthForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_health_form"
+
+    async def validate_confirm_exercise(self,
+                                        value: Text,
+                                        dispatcher: CollectingDispatcher,
+                                        tracker: Tracker,
+                                        domain: Dict[Text, Any]) -> Dict[Text, Any]:
+
+        if value:
+            return {"confirm_exercise": True}
+        else:
+            return {"exercise": "None", "confirm_exercise": False}
+

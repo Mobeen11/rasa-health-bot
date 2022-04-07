@@ -39,9 +39,16 @@ nlu:
     - that sounds good
     - correct
     - sure
-    - indeed
+    - ok
+    - why not
+    - ok great
+    - yes I did
+    - yeah, great
+    - pretty good
     - fine
-    
+    - You bet
+    - I sure did
+    - more or less
 
 - intent: deny
   examples: |
@@ -54,44 +61,50 @@ nlu:
     - not really
     - nope
     - no thank you
-    - no I don't want to
+    - no I don't want to    
+    - didn't do any
+    - no I didn't
+    - could have been better
 
-- intent: form
-  - a full [8 hour](sleep) sleep
-  - only [four hour](sleep) sleep
-  - about [six hour](sleep)
-  - [low](stress) stress
-  - [medium](stress) stress
-  - [high](stress) stress
-  - Yes, I went for a [run](stress)
-  - [played football](exercise)
-  - [went to gym](exercise)
-  - played some [basketball](exercise)
-  - I did a [workout](exercise)
-  - I want to get up and go for a [run](exercise)
-  - [Be more patient with my family](goal)
-  - [eat less junk food](goal)
-  - [eat better](goal)
-  - [spend less time on my phone](goal)
-  - I ate a [salad](diet)
-  - [too many snacks](diet)
-  - [too many sweets](diet)
-  - [too much junk food](diet)
-  - [a lot of carbs](diet)
-  - [get more exercise](diet)
-  - [too much fatty food](goal)
+
+- intent: inform
+  examples: |
+    - a full [8 hour](sleep) sleep
+    - only [four hour](sleep) sleep
+    - about [six hour](sleep)
+    - [low](stress) stress
+    - [medium](stress) stress
+    - [high](stress) stress
+    - Yes, I went for a [run](stress)
+    - [played football](exercise)
+    - [went to gym](exercise)
+    - played some [basketball](exercise)
+    - I did a [workout](exercise)
+    - I want to get up and go for a [run](exercise)
+    - [Be more patient with my family](goal)
+    - [eat less junk food](goal)
+    - [eat better](goal)
+    - [spend less time on my phone](goal)
+    - I ate a [salad](diet)
+    - [too many snacks](diet)
+    - [too many sweets](diet)
+    - [too much junk food](diet)
+    - [a lot of carbs](diet)
+    - [get more exercise](diet)
+    - [too much fatty food](goal)
 
 
 - intent: out_of_scope
-  - that's not what I want to do
-  - wait stop
-  - you are no help
-  - this is no help at all
-  - how old are you
-  - I want to order pizza.
-  - tell me the weather
-  - I already told you that.
-  - I changed my mind
+  examples: |
+    - that's not what I want to do
+    - wait stop
+    - you are no help
+    - this is no help at all
+    - how old are you
+    - I want to order pizza.
+    - tell me the weather
+    - I already told you that.
+    - I changed my mind
 
 
 - intent: mood_great
@@ -141,7 +154,6 @@ nlu:
     - what are the methods to reduce stress?
     - What are the good ways to lower stress?
     - What are the things I can do to lower my stress?
-      
 
 - intent: ask_eat_healthy
   examples: |
@@ -156,4 +168,3 @@ nlu:
     - What's a good amount of exercise for someone in their twenties?
     - Is walking once a day good enough?
     - How much exercise is recommended?
-      

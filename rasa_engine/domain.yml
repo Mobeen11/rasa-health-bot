@@ -14,24 +14,52 @@ intents:
   - inform
   - out_of_scope
 
+forms:
+  health_form:
+    required_slots:
+      - confirm_exercise
+      - exercise
+      - sleep
+      - stress
+      - diet
+      - goal
 slots:
   confirm_exercise:
-    type: text
+    type: bool
+    mappings:
+    - type: from_entity
+      entity: confirm_exercise
   exercise:
     type: text
+    mappings:
+    - type: from_entity
+      entity: exercise
   sleep:
     type: text
+    mappings:
+    - type: from_entity
+      entity: sleep
   diet:
-    type: text
+    type: any
+    mappings:
+    - type: from_entity
+      entity: diet
   stress:
-    type: text
+    type: any
+    mappings:
+    - type: from_entity
+      entity: stress
   goal:
-    type: text
+    type: any
+    mappings:
+    - type: from_entity
+      entity: goal
 
 entities:
   - exercise
   - sleep
   - stress
+
 
 responses:
   utter_greet:
@@ -90,8 +118,8 @@ responses:
   utter_ask_continue:
     - text: "Sorry! I don't quite understand. Do you want to continue?"
 
-forms:
-  - health_form
+actions:
+  - validate_health_form
 
 session_config:
   session_expiration_time: 60
