@@ -72,10 +72,17 @@ nlu:
     - a full [8 hour](sleep) sleep
     - only [four hour](sleep) sleep
     - about [six hour](sleep)
+    - [6](sleep)
+    - [7](sleep)
+    - [9](sleep)
+    - [12](sleep)
     - [low](stress) stress
     - [medium](stress) stress
     - [high](stress) stress
-    - Yes, I went for a [run](stress)
+    - [very high](stress) stress
+    - [very low](stress) stress
+    - Yes, I went for a [run](exercise)
+    - Yes, I went for a [jogging](exercise)
     - [played football](exercise)
     - [went to gym](exercise)
     - played some [basketball](exercise)
